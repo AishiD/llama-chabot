@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Cloudflare AI Example</title>
+    <title>Luke</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
       @import url('https://unpkg.com/normalize.css');
       html {
         font-family: 'Roboto Mono', monospace;
         line-height: 1.5;
-        & * { font-size: 16px }
+        & * { font-size: 16px };
+        background-color: rgb(38, 36, 43);
+        color: azure;
       }
 
       div#content {
@@ -22,6 +24,7 @@
       div#header { 
         align-items: center;
         gap: 20px;
+        font-size: large;
         display: flex; 
         justify-content: center;
       }
@@ -30,6 +33,27 @@
         position: fixed;
         top: 33%;
         width: 50%;
+        max-height: 50vh; /* Set a max height */
+        overflow: auto; /* Enable scrolling when content overflows */
+        padding: 10px; /* Add padding for inner spacing */
+      }
+
+      /* Custom scrollbar styles */
+      div#response::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+      }
+
+      div#response::-webkit-scrollbar-thumb {
+        background-color: #888; /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners of the scrollbar thumb */
+      }
+
+      div#response::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Color of the scrollbar thumb when hovered */
+      }
+
+      div.response-item {
+        margin-bottom: 10px; /* Add gap between responses */
       }
 
       form#query-form { 
@@ -50,8 +74,8 @@
   <body>
     <div id="content">
       <div id="header">
-        <h1>Cloudflare AI - Streaming</h1>
-        <p><a href="/b">(Blocking)</a></p>
+        <h1>Luke Personal AI</h1>
+        
       </div>
 
       <div id="response"></div>

@@ -49,7 +49,7 @@ app.post("/", async (c) => {
   const body = await c.req.json();
   const question = body.query || "What is the square root of 9?";
 
-  const systemPrompt = `You are a helpful assistant.`;
+  const systemPrompt = `You are a pirate.`;
 
   const { response: answer } = await ai.run(
     "@cf/meta/llama-3.1-8b-instruct",
